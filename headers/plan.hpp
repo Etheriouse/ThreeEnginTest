@@ -15,7 +15,7 @@ public:
     void printPlan();
     vector getU();
     vector getV();
-    vector get_projectionPlan(vector v);
+    vector get_projectionPlan(vector vect);
 };
 
 #endif

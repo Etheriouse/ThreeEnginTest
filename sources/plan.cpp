@@ -34,7 +34,9 @@ vector plan::getV()
     return v;
 }
 
-vector plan::get_projectionPlan(vector v)
+vector plan::get_projectionPlan(vector vect)
 {
-    return vector();
+    vector temp = getV().get_projectionVector(vect);
+    temp.addVect(getU().get_projectionVector(vect));
+    return temp;
 }

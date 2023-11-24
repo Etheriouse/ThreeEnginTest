@@ -1,22 +1,31 @@
 #ifndef vector_cpp
 #define vector_cpp
 
+#include "point.hpp"
+
 class vector {
 
 private:
-    int x;
-    int y;
-    int z;
+    float x;
+    float y;
+    float z;
+
+    point start;
 
 public:
     vector();
-    vector(int _x, int _y, int _z);
+    vector(float _x, float _y, float _z);
+    vector(float _x, float _y, float _z, point _start);
     void printVect();
-    int getX();
-    int getY();
-    int getZ();
+    void setVect(vector v);
+    float getX();
+    float getY();
+    float getZ();
+    point getStart();
     float getNorme();
-    int getScalaire(vector v);
+    float getScalaire(vector v);
+    void getMult(float f);
+    void addVect(vector v);
     vector get_projectionVector(vector v);
 };
 
